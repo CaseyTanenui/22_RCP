@@ -45,36 +45,21 @@ def string_check(choice, options):
         else:
             is_valid = "no"
 
-    # if the snack os not Ok - ask question again 
-
-    if is_valid == "yes":
-        return chosen
-    else:
-        return "invalid choice"
-
 # Instructions on how to use this program
-def instrutions(options):
-    show_help = "invalid choice"
-    while show_help == "invalid choice":
-        show_help = input("Would you like to read the instructions?: ")
-        show_help = string_check(show_help, options)
-    
-    if show_help == "yes":
-        print("-- Recipe Cost Calculator Information --")
-        print("USE THIS PROGRAM IN THE INSTANCE")
-        print("THAT YOU WOULD LIKE TO KNOW THE COST")
-        print("OF THE RECIPE THAT YOU ARE COOKING/CONSUMING")
-        print("To use this program, Enter the correct amount of")
-        print("- Food items, The costs of each ingredient")
-        print("- and the correct amount of servings you have chosen")
-        print("Once you have correctly entered each one of the item")
-        print("It will then calculate the correct amount of $ for each serving")
-    return ""
-    
+#def instructions():
+
 # -- Main Routine starts here --
 
-# the list for valid yes / no responses
-yes_no = [
-    ["yes", "y"],
-    ["no", "n"]
-]
+show_help = yes_no("Would you like to read the Instructions?: ")
+    
+if show_help == "yes":
+    print("-- Recipe Cost Calculator Information --")
+    print("USE THIS PROGRAM IN THE INSTANCE")
+    print("THAT YOU WOULD LIKE TO KNOW THE COST")
+    print("OF THE RECIPE THAT YOU ARE COOKING/CONSUMING")
+    print("To use this program, Enter the correct amount of")
+    print("- Food items, The costs of each ingredient")
+    print("- and the correct amount of servings you have chosen")
+    print("Once you have correctly entered each one of the item")
+    print("It will then calculate the correct amount of $ for each serving")
+    
